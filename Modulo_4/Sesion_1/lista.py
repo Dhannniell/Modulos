@@ -19,4 +19,29 @@ def buscar_pedido(pedidos: list[str], pedido_a_buscar: str) -> int:
         return -1
 
 def main():
+    #Lista inicial de pedidos
+    pedidos_tienda = ["Pedido 1", "Pedido 3"]
     
+    # Agregar un nuevo pedido a la lista
+    pedidos_tienda = agregar_pedido(pedidos_tienda, "Pedido 2")
+    
+    # Mostrar los elementos de la lista de forma desordenada
+    print("Lista actualizada de pedidos", pedidos_tienda)
+    
+    # Ordene la lista
+    pedidos_tienda.sort()
+    print("Lista actualizada de pedidos ordenados", pedidos_tienda)
+    
+    # Buscar un pedido en especifico
+    pedido_a_buscar = "Pedido 3"
+    indice = buscar_pedido(pedidos_tienda, pedido_a_buscar)
+    if indice != -1:
+        print(f"el {pedido_a_buscar} se encuentra en la posicion {indice}")
+    
+    # Eliminar un pedido de la lista 
+    pedido_a_eliminar = "Pedido 1"
+    pedidos_tienda = eliminar_pedido(pedidos_tienda, pedido_a_eliminar)
+    print(f"La lista resultante luego de eliminar el {pedido_a_eliminar} es {pedidos_tienda}")
+    
+if __name__ == "__main__":
+    main()
