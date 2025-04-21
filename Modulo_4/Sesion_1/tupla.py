@@ -22,4 +22,13 @@ def analizar_salario(salarios: Tuple[int, ...]) -> None:
         print(f"El salario  con un valor de {salario_a_buscar} se encuentra en la posicion {salarios.index(salario_a_buscar)}")
     
 def main():
-    empleado1= (159263, "Jose Ramon", "Director de Desarrollo")
+    empleado = (159263, "Jose Ramon", "Director de Desarrollo")
+    
+    obtener_info_empleado(empleado)
+    
+    salarios_de_empleados = (500, 500, 100, 200, 300, 400, 500, 600)
+    
+    analizar_salario(salarios_de_empleados)
+    
+if __name__ == "__main__":
+    main()
