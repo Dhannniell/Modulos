@@ -16,7 +16,17 @@ def gestionar_clientes(clientes: Set[str]) -> None:
     clientes.add("Carlos")
     print("Cliented despues de agregar intentar agregar a Carlos", clientes)
     
-    # Uso de la funcion "remove" para eliminar un cliente (si existe el cliente), y si no -> ERROR
+    # Uso de la funcion "remove" para eliminar un cliente (si existe el cliente, y si no -> ERROR)
     clientes = "Ana"
     clientes.remove("Ana")
-    print("Cliented despues de eliminar a Ana", clientes)
+    print("Cliented despues de eliminar a Ana con el metodo remove", clientes)
+    
+    # Uso de la funcion discard para eliminar un elemento del Set 
+    cliente2 = "Luis"
+    clientes.discard(cliente2)
+    print("Clientes despues de eliminar a Luis con el metodo Discard: ", clientes)
+    
+    # Uso del metodo POP para mostrar un elemento y posterior lo borra automaticamente 
+    cliente_removido = clientes.pop()
+    print(f"Cliente removido aleatoriamente: {cliente_removido}")
+    print("Clientes restantes:", clientes)
